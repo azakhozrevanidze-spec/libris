@@ -1,0 +1,88 @@
+:root {
+  --deep-blue: #0A1628;
+  --navy: #132240;
+  --gold: #C9A84C;
+  --gold-light: #E8C87A;
+  --gold-pale: #F5E6C0;
+  --cream: #FAF7F0;
+  --text-primary: #1A1A2E;
+  --text-secondary: #4A5568;
+  --text-muted: #718096;
+  --border: rgba(201,168,76,0.2);
+  --glass: rgba(10,22,40,0.85);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+a { text-decoration: none; color: inherit; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--deep-blue);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,168,76,0.35); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 1.5px solid var(--gold);
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-outline:hover { background: var(--gold); color: var(--deep-blue); transform: translateY(-2px); }
+
+.badge-free {
+  background: rgba(52, 211, 153, 0.15);
+  color: #059669;
+  border: 1px solid rgba(52,211,153,0.3);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badge-paid {
+  background: rgba(201,168,76,0.15);
+  color: #92700A;
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
