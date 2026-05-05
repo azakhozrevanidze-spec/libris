@@ -24,6 +24,7 @@ export default function BookDetail() {
       minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
       background: 'var(--cream)', paddingTop: 72,
     }}>
+      <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       <div style={{ textAlign: 'center' }}>
         <div style={{
           width: 48, height: 48, border: '3px solid rgba(201,168,76,0.2)',
@@ -33,7 +34,6 @@ export default function BookDetail() {
         <p style={{ color: '#718096', fontFamily: 'DM Sans, sans-serif' }}>
           {lang === 'ka' ? 'იტვირთება...' : 'Loading...'}
         </p>
-        <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       </div>
     </div>
   );
@@ -60,13 +60,14 @@ export default function BookDetail() {
 
   return (
     <div style={{ minHeight: '100vh', background: 'var(--cream)', paddingTop: 72 }}>
+      <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+
       {/* Hero */}
       <div style={{
         background: 'linear-gradient(135deg, #0A1628 0%, #132240 100%)',
         padding: '60px 5%',
         position: 'relative', overflow: 'hidden',
       }}>
-        {/* Decorative */}
         <div style={{
           position: 'absolute', top: -100, right: -100, width: 400, height: 400,
           borderRadius: '50%', border: '1px solid rgba(201,168,76,0.08)', pointerEvents: 'none',
@@ -151,6 +152,7 @@ export default function BookDetail() {
                   book.pdf_url ? (
                     <a
                       href={book.pdf_url}
+                      download
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-primary"
@@ -172,7 +174,6 @@ export default function BookDetail() {
                         animation: 'spin 0.8s linear infinite', flexShrink: 0,
                       }} />
                       {lang === 'ka' ? 'PDF იტვირთება...' : 'PDF uploading...'}
-                      <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
                     </div>
                   )
                 ) : (
@@ -220,7 +221,6 @@ export default function BookDetail() {
               {desc}
             </p>
 
-            {/* Both languages */}
             {book.description_en && book.description_ka && (
               <div style={{
                 marginTop: 32, paddingTop: 24,
